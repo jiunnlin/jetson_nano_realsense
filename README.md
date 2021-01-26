@@ -35,8 +35,8 @@ sudo reboot
 
 ### 以realsense-viewer應用程式測試 intel RealSense D435i
 #### RealSense Viewer是RealSense SDK很方便的應用，它可以幫助使用者在開發程式之前，先確認這些事：
-*1.確認RealSense型號
-*2.裝置與RealSense 的USB版本
-*3.確認RGB、深度、IR影像
-*4.確認RGB與深度的影像整合畫面
-*5.設定輸出像素、FPS、ROI與簡易的濾波
+1.確認RealSense型號
+2.裝置與RealSense 的USB版本
+3.確認RGB、深度、IR影像
+4.確認RGB與深度的影像整合畫面
+5.設定輸出像素、FPS、ROI與簡易的濾波
