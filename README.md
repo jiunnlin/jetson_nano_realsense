@@ -9,9 +9,17 @@ pip3 install https://github.com/google-coral/pycoral/releases/download/release-f
 
 ### 安裝Realsense支援套件
 #### Step1 安裝Swapfile提高JetsonNano記憶容量
-目標:解決Jetson Nano內存壓力的問題，可以使用在USB的隨身碟或SSD上，預設擴充的內存為6GB。
+解決Jetson Nano內部記憶體可能在安裝時不足的問題，使用在USB的隨身碟或SSD進行虛擬記憶體的操作，預設擴充的內存為6GB。
 ```bash
 git clone https://github.com/jetsonhacksnano/installSwapfile
 cd installSwapfile
 ./installSwapfile.sh
+sudo reboot
+```
+#### Step2 安裝RealSense SDK
+```bash
+git clone https://github.com/jetsonhacksnano/installLibrealsense
+cd installLibrealsense
+./installLibrealsense.sh
+./buildLibrealsense.sh
 ```
