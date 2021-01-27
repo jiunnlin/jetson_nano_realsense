@@ -43,7 +43,7 @@ sudo reboot
 ##### 4.確認RGB與深度的影像整合畫面
 ##### 5.設定輸出像素、FPS、ROI與簡易的濾波
 
-開啟terminal輸入以下指令，會顯示RealSense操作介面
+開啟Terminal輸入以下指令，會顯示RealSense操作介面
 ```bash
 realsense-viewer
 ```
@@ -57,3 +57,17 @@ realsense-viewer
 #### 操作測距模式
 開啟【Stereo Module】，從【Preset】可以調整影像輸出的模式，以下圖為例，點選【Hand】模式，手指的輪廓可以更清晰呈現。畫面的影響顏色代表深度模組偵測的距離，右方有一個量表，量值的範圍為0至4公尺，分別用漸層的顏色來表示。我們可以看到圖中藍色的手部輪廓，離攝影機最近，約20至30公分，背後牆壁的部分離攝影機為兩公尺，D435的深度誤差為1至2公分。
 ![](./realsense_viewer_3.png)
+
+## 透過OBJECT_distance.py程式進行影像目標偵測並且測距
+### 採用Tensorflow Lite的預訓練模型
+請於執行程式之前，將預訓練模型檔mobilenet_ssd_v2_coco_quant_postprocess.tflite與標籤檔coco_labels.txt存放至與Python程式同一個目錄當中。
+請開啟Terminal執行以下命令：
+```bash
+python3 OBJECT_distance.py\
+--model mobilenet_ssd_v2_coco_quant_postprocess.tflite\
+--labels coco_labels.txt
+```
+#### 參數說明：
+--model 目標偵測預訓練模型檔，請注意!若使用本範例程式，務必使用Tensorflow Lite格式的模型。
+相關預訓練模型，亦可以至Tensorflow官網查詢下載(https://www.tensorflow.org/lite/models)。
+--labels 標籤檔，請注意!標籤檔的內容必須與「目標偵測預訓練模型檔」相互匹配。
