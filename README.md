@@ -73,3 +73,7 @@ python3 OBJECT_distance.py\
 ##### --labels 標籤檔，請注意!標籤檔的內容必須與「目標偵測預訓練模型檔」相互匹配。
 
 ### 執行畫面
+![](./work_1.jpg)
+![](./work_2.jpg)
+![](./work_3.jpg)
+![](./work_4.jpg)
