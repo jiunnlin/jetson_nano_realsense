@@ -40,3 +40,10 @@ sudo reboot
 ##### 3.確認RGB、深度、IR影像
 ##### 4.確認RGB與深度的影像整合畫面
 ##### 5.設定輸出像素、FPS、ROI與簡易的濾波
+
+開啟terminal輸入以下指令，會顯示RealSense操作介面
+```bash
+realsense-viewer
+```
+
+
