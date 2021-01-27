@@ -1,6 +1,8 @@
 # 透過Jetson Nano 連接 intel Realsense D435i 進行目標偵測與測距
 
 ## 環境設定
+### 請開啟terminal輸入以下操作指令，請注意，務必按照流程順序完成。
+
 ### 安裝Tensorflow Lite Runtime套件程式
 影像目標偵測採用SSD Mobilenet V2版本的Tensorflow Lite預訓練模型，因此必須要事先安裝Tensorflow Lite Runtime套件，安裝流程如下：
 ```bash
@@ -45,5 +47,14 @@ sudo reboot
 ```bash
 realsense-viewer
 ```
-
+#### realsense-viewer 的首頁歡迎畫面
 ![](./realsense_viewer_1.png)
+
+#### 操作模式的介紹
+接上RealSense D435，在螢幕左上角可以確認RealSense的型號，開發板連結RealSense的USB版本，可從Stereo Module的on/off 開關開啟深度資訊、RGB Camera則是一般的影像串流。
+![](./realsense_viewer_2.png)
+
+#### 操作測距模式
+開啟【Stereo Module】，從【Preset】可以調整影像輸出的模式，以下圖為例，點選【Hand】模式，手指的輪廓可以更清晰呈現。畫面的影響顏色代表深度模組偵測的距離，右方有一個量表，量值的範圍為0~4公尺，分別用漸層的顏色來表示。我們可以看到圖中藍色的手部輪廓，離攝影機最近，約20~30公分，背後牆壁的部分離攝影機為兩公尺，D435的深度誤差為1~2公分。
+![](./realsense_viewer_3.png)
+
