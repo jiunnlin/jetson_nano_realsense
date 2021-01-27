@@ -68,6 +68,6 @@ python3 OBJECT_distance.py\
 --labels coco_labels.txt
 ```
 #### 參數說明：
---model 目標偵測預訓練模型檔，請注意!若使用本範例程式，務必使用Tensorflow Lite格式的模型。
+##### --model 目標偵測預訓練模型檔，請注意!若使用本範例程式，務必使用Tensorflow Lite格式的模型。
 相關預訓練模型，亦可以至Tensorflow官網查詢下載(https://www.tensorflow.org/lite/models)。
---labels 標籤檔，請注意!標籤檔的內容必須與「目標偵測預訓練模型檔」相互匹配。
+##### --labels 標籤檔，請注意!標籤檔的內容必須與「目標偵測預訓練模型檔」相互匹配。
