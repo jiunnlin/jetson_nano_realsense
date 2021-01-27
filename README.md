@@ -46,4 +46,4 @@ sudo reboot
 realsense-viewer
 ```
 
-
+![](./realsense_viewer_1.png)
